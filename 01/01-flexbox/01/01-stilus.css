@@ -1,0 +1,23 @@
+#tarolo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+}
+
+#zold{
+    background-color: green;
+}
+
+#sarga{
+    background-color: yellow;
+}
+
+#lila{
+    background-color: purple;
+}
+
+.item{
+    width: 100%;
+
+}

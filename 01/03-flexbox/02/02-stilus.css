@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+}
+
+#purplecontainer{
+    background-color: purple;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.blue{
+    background-color: lightskyblue;
+    margin-left: 15px;
+    width: 100px;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+   
+    
+}
+
+#yellow{
+    background-color: yellow;
+    flex: 2;
+}
+
+#green{
+    background-color: green;
+    flex:1;
+}
