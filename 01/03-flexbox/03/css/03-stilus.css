@@ -1,0 +1,48 @@
+*{margin: 0px; background-color: bisque;}
+
+#aqua{
+    background-color: aqua;
+    height: 100px;
+    width: 700px;
+}
+
+#orange{
+    background-color: orange;
+    height: 100%;
+    width: 100px;
+    margin-right: 50px;
+}
+
+#red{
+    background-color: red;
+    height: 100%;
+    width: 400px;
+    margin-right: 50px;
+}
+
+#purple{
+    background-color: purple;
+    height: 100%;
+    width: 100px;
+
+}
+
+#blue{
+    background-color: blue;
+    height: 100px;
+    width: 700px;
+}
+
+#black{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    float: right;
+    margin-right: 100px;
+}
+
+#verticalcontainer{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+}

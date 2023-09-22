@@ -1,0 +1,29 @@
+li{
+    list-style-type: none;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    background-color: yellow;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+
+.purple{
+    background-color: purple;
+}
+
+.item{
+    height: 100px;
+    width: 100px;
+}
+
+li{
+    text-decoration: none;
+    margin-left: 5px;
+}
+
