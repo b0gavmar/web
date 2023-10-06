@@ -1,0 +1,117 @@
+body{
+    background-image: url("../images/light.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+
+#container{
+    width: 90%;
+    background-color: rgba(243, 236, 236, 0.685); /*rgba(243, 236, 236, 0.685)*/
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.day{
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    flex: 15%;
+}
+
+.lesson{
+    background-color: rgb(247, 238, 238);
+    border: 2px solid black;
+    margin: 8px; 
+    border-radius: 5px;
+}
+
+
+.classname{
+    color: black;
+   font-weight: bold;
+   text-align: center;
+   position: relative;
+   
+}
+
+p{
+    margin: 0px;
+    color: rgb(68, 68, 68);
+}
+
+header{
+    text-align: center;
+    background-color: rgb(196, 161, 219);
+    height: 60px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1{
+    margin-top: 0px;
+    padding: 10px;
+
+}
+
+
+#switchbutton{
+    margin-bottom: 18px;
+}
+
+#darklightmode{
+    width: 35px;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 800px) {
+    .day {
+      flex: 45%;
+      max-width: 100%;
+    }
+  }
+  
+@media (max-width: 400px) {
+    .day {
+      flex: 50%;
+      max-width: 100%;
+    } 
+    
+}
+
+@media (max-width:370px){
+    header{
+        height: 100px;
+    } 
+}

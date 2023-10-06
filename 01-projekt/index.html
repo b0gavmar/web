@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>feladat 1.1</title>
+</head>
+<body>
+    <header> 
+        <div id="navbar">
+            
+            <h1>Vasvári 12b órarendje</h1>
+            <div>
+                <button id="switchbutton" onclick="SwitchDL();"><img src="images/darklightmode.png" alt="darklightmode" id="darklightmode" title="Darkmode/lightmode"></button>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="container">
+        
+
+        <div class="row">
+            <div  class="day">
+                <h2>Hétfő</h2>
+                <div class="lesson">
+                    <div class="info">
+                        <p>8:00</p>
+                        <p>8:45</p>
+                    </div>
+                    <p class="classname">IKT 2</p>
+                    
+                    <div class="info">
+                        <p >Sz1</p>
+                        <p >Gycs</p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>8:55</p>
+                        <p>9:40</p>
+                    </div>
+                    <p class="classname">Aszalfejl.</p>
+                    <div class="info">
+                        <p>Sz1</p>
+                        <p>Gycs</p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>9:55</p>
+                        <p>10:40</p>
+                    </div>
+                    <p class="classname">Angol</p>
+                    <div class="info">
+                        <p>Zsib</p>
+                        <p>BJ</p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                    <p class="timestart">10:50</p>
+                    <p class="timeend">11:35</p>
+                    </div>
+                    <p class="classname">Nyelvtan</p>
+                    <div class="info">
+                    <p >14</p>
+                    <p >HÉ</p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p class="timestart">11:45</p>
+                        <p class="timeend">12:30</p>
+                    </div>
+                    <p class="classname">Irodalom</p>
+                    <div class="info">
+                        <p >14</p>
+                        <p >HÉ</p>
+                    </div>
+                </div>
+                <div class="lesson">  
+                    <div class="info">
+                        <p class="timestart">12:45</p>
+                        <p class="timeend">13:30</p>  
+                    </div>   
+                    <p class="classname">Tört.</p>
+                    <div class="info">
+                        <p >30</p>
+                        <p >DZ</p>
+                    </div> 
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p >13:40</p>
+                        <p >14:25</p> 
+                    </div>
+                    <p class="classname">Testn.</p>
+                    <div class="info">
+                        <p >T</p>
+                        <p >DE</p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p >14:30</p>
+                        <p >15:15</p> 
+                    </div>
+                    <p  class="classname">Testn.</p>
+                    <div class="info">
+                        <p >T</p>
+                        <p >DE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h2>Kedd</h2>
+                <div class="lesson">
+                    <div class="info">
+                        <p>8:55</p>
+                        <p>9:40</p>
+                    </div>
+                    <p class="classname">Matek</p>
+                    <div class="info">
+                        <p >K1</p>
+                        <p >KT</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>9:55</p>
+                        <p>10:40</p>
+                    </div>
+                    <p class="classname">Szang.</p>
+                    <div class="info">
+                        <p >nylab</p>
+                        <p >BJ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>10:50</p>
+                        <p>11:35</p>
+                    </div>
+                    <p class="classname">Angol</p>
+                    <div class="info">
+                        <p >7</p>
+                        <p >BJ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>11:45</p>
+                        <p>12:30</p>
+                    </div>
+                    <p class="classname">Aszalfejl.</p>
+                    <div class="info">
+                        <p >Szt3</p>
+                        <p >GyCs</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>12:45</p>
+                        <p>13:30</p>
+                    </div>
+                    <p class="classname">Tört.</p>
+                    <div class="info">
+                        <p >14</p>
+                        <p >DZ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>13:40</p>
+                        <p>14:25</p>
+                    </div> 
+                    <p class="classname">Irodalom</p>
+                    <div class="info">
+                        <p>14</p>
+                        <p>HÉ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>14:30</p>
+                        <p>15:15</p>
+                    </div>
+                    <p class="classname">Of</p>
+                    <div class="info">
+                        <p >13</p>
+                        <p>BJ</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div  class="day">
+                <h2>Szerda</h2>
+                <div class="lesson">
+                    <div class="info">
+                        <p>9:55</p>
+                        <p>10:40</p>
+                    </div>
+                    <p class="classname">Tört.</p>
+                    <div class="info">
+                        <p>14</p>
+                        <p>DZ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>10:50</p>
+                        <p>11:35</p>
+                    </div>
+                    <p class="classname">Szang.</p>
+                    <div class="info">
+                        <p>7</p>
+                        <p>BJ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>11:45</p>
+                        <p>12:30</p>
+                    </div>
+                    <p class="classname">Angol</p>
+                    <div class="info">
+                       <p>nylab</p>
+                        <p>BJ</p> 
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>12:45</p>
+                        <p>13:30</p>
+                    </div>
+                    <p class="classname">Mat</p>
+                    <div class="info">
+                        <p>zsib</p>
+                        <p>KT</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div  class="day">
+                <h2>Csütörtök</h2>
+                <div class="lesson">
+                    <div class="info">
+                        <p>8:55</p>
+                        <p>9:40</p>
+                    </div>
+                    <p class="classname">Irodalom</p>
+                    <div class="info">
+                        <p>14</p>
+                        <p>HÉ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>9:55</p>
+                        <p>10:40</p>
+                    </div>
+                    <p class="classname">Tört.</p>
+                    <div class="info">
+                        <p>30</p>
+                        <p>DZ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>10:50</p>
+                        <p>11:35</p>
+                    </div>
+                    <p class="classname">Ái.</p>
+                    <div class="info">
+                        <p>13</p>
+                        <p>DZ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>11:45</p>
+                        <p>12:30</p>
+                    </div>
+                    <p class="classname">Aszalfejl.</p>
+                    <div class="info">
+                        <p>Szt1</p>
+                        <p>GyCs</p>  
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>12:45</p>
+                        <p>13:30</p>
+                    </div> 
+                    <p class="classname">Matek</p>
+                    <div class="info">
+                        <p>5</p>
+                        <p>KT</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>15:20</p>
+                        <p>16:00</p>
+                    </div>
+                    <p class="classname">Szoftteszt</p>
+                    <div class="info">
+                       <p>14</p>
+                        <p>NyT</p> 
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>16:05</p>
+                        <p>16:45</p>
+                    </div>
+                    <p class="classname">Szoftteszt</p>
+                    <div class="info">
+                        <p>14</p>
+                        <p>NyT</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div  class="day">
+                <h2>Péntek</h2>
+                <div  class="lesson">
+                    <div class="info">
+                        <p>8:00</p>
+                        <p>8:45</p>
+                    </div>
+                    <p class="classname">Szang.</p>
+                    <div class="info">
+                        <p>K3</p>
+                        <p>BJ</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>8:55</p>
+                        <p>9:40</p>
+                    </div>
+                    <p class="classname">W(l</p>
+                    <div class="info">
+                        <p>Szt2</p>
+                        <p>KA</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>9:55</p>
+                        <p>10:40</p>
+                    </div>
+                    <p class="classname">Webprog</p>
+                    <div class="info">
+                        <p>tani</p>
+                        <p>KT</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>10:50</p>
+                        <p>11:35</p>
+                    </div>
+                    <p class="classname">Lpl(l</p>
+                    <div class="info">
+                        <p>nylab</p>
+                        <p>KA</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>11:45</p>
+                        <p>12:30</p>
+                    </div>
+                    <p class="classname">Matek</p>
+                    <div class="info">
+                        <p>K1</p>
+                        <p>KT</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>12:45</p>
+                        <p>13:30</p>
+                    </div> 
+                    <p class="classname">IKT 2.</p>
+                    <div class="info">
+                       <p>Szt1</p>
+                        <p>Gycs</p> 
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>13:40</p>
+                        <p>14:25</p>
+                    </div> 
+                    <p class="classname">Aszalfejl.</p>
+                    <div class="info">
+                        <p>Szt1</p>
+                        <p>GyCs</p>
+                    </div>
+                    
+                </div>
+                <div class="lesson">
+                    <div class="info">
+                        <p>14:30</p>
+                        <p>15:15</p>
+                    </div>
+                    <p class="classname">Testn.</p>
+                    <div class="info">
+                        <p>T</p>
+                        <p>DE</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="day">
+                <h2>Szombat</h2>
+                <div class="lesson">
+                    <div class="info">
+                        <p>13:00</p>
+                        <p>14:30</p>
+                    </div>
+                    <p class="classname">Edzés</p>
+                    <div class="info">
+                        <p>Kondi</p>
+                        <p></p>
+                    </div>
+                </div> 
+                <div class="lesson">
+                    
+                        <div class="info">
+                            <p>17:00</p>
+                            <p>19:30</p>
+                        </div>
+                        <p class="classname">Tanulás</p>
+                        <div class="info">
+                            <p>Otthon</p>
+                            <p></p>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="day">
+                <h2>Vasárnap</h2>
+                <div class="lesson">
+                    <div class="info">
+                        <p>13:00</p>
+                        <p>14:30</p>
+                    </div>
+                    <p class="classname">Edzés</p>
+                    <div class="info">
+                        <p>Kondi</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="lesson">
+                    
+                    <div class="info">
+                        <p>17:00</p>
+                        <p>19:30</p>
+                    </div>
+                    <p class="classname">Tanulás</p>
+                    <div class="info">
+                        <p>Otthon</p>
+                        <p></p>
+                    </div>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
