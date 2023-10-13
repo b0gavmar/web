@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <title>feladat 2.1</title>
+</head>
+<body>
+    <div id="container">
+        <input type="button" value="elsoelem" onclick="elsoElemMegjelen();">
+        <input type="button" value="masodikelem" onclick="masodikElemMegjelen();">
+        <input type="button" value="harmadikelem" onclick="harmadikElemMegjelen();">
+        <input type="button" value="osszegelem" onclick="osszesElemMegjelen();">
+        <input type="button" value="tombhossz" onclick="tombHosszMegjelen();">
+        <div>
+            <input type="text" name="ujelem" id="ujelemszoveg">
+            <input type="button" value="hozaad" name="hozzaad" id="ujelemhozzaad" onclick="ujElemHozaad();">
+        </div>
+        <div>
+            <input type="number" name="indextorles" id="indextorlesszoveg">
+            <input type="button" value="indexen lévő elem törlése" name="indextorlesebutton" id="indextrololbutton" onclick="indexTorol();">
+        </div>
+        <div id="szoveg"></div>
+    </div>
+</body>
+</html>
