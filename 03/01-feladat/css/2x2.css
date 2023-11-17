@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px;
+    gap: 30px;
+    background-color: rgb(127, 236, 255);
+    max-width: 630px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+
+}
+
+.item{
+    background-color: yellow;
+    border-radius: 10%;
+}
