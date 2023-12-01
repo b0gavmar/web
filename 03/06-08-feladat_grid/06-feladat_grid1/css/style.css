@@ -1,0 +1,10 @@
+#grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    max-width: fit-content;
+    gap: 10px;
+}
+#item{
+    background-color: rgb(25, 0, 255);
+}
