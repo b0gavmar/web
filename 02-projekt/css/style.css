@@ -1,0 +1,97 @@
+html{
+    background-image: url("../images/Sentinels_of_Light_WR_Promo_02.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*display none */
+
+body{ 
+    background-size: fill;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#flex-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-height: 100vh;
+
+}
+
+.card{
+    background-image: url("../images/cardback-lor.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 230px;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.duck{
+    background-image: url("../images/duck.png");
+}
+
+.kreon{
+    background-image: url("../images/kreon.png")
+}
+
+.weharharhar{
+    background-image: url("../images/weharharhar.png")
+}
+
+.zsoli{
+    background-image: url("../images/zsoli.png")
+}
+
+.ady{
+    background-image: url("../images/adyender.png")
+}
+
+.aaa{
+    background-image: url("../images/aaa.png")
+}
+
+#startdiv{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    border: 2px solid rgb(0, 0, 0);
+    background-image: linear-gradient(to right top, #70f8b1, #a1f8ab, #c5f8ab, #e0f8b2, #f5f8bf);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 800px) {
+    .card {
+      flex: 35%;
+      max-width: 200px;
+      max-height: 270px;
+    }
+  }
+  
+@media (max-width: 400px) {
+    .card {
+      flex: 100%;
+      max-width: 200px;
+      max-height: 300px;
+    } 
+    
+}
