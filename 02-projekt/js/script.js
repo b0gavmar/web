@@ -1,12 +1,14 @@
-var elements = ["a","a","b","b","c","c","d","d","e","e","f","f"];
-var tomb = [];
+var elements;
+var tomb;
 var clicked = 0;
 var clickedIndex = [];
 var clickedValue1;
 var clickedValue2;
 var talalat = 0;
 
-function Random(){   
+function Random(){
+        elements = ["a","a","b","b","c","c","d","d","e","e","f","f"];
+        tomb = [];
         let random = Math.floor(Math.random()*elements.length);
         console.log("hossz:"+elements.length)
         console.log("random, ami hossz-1, max11:"+random);
