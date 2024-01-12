@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of cubed odd numbers</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ki"></div>
+    </div>
+    
+    <script>
+        function cubeOdd(arr) {
+        var sum = 0;
+        arr.forEach(element => {
+            if((element%2==1) | (element%2==-1)){
+                sum+=Math.pow(element,3);
+            }
+            if(isNaN(element)){
+                sum = undefined;
+            }
+        });
+
+        return sum;
+        }
+    </script>
+</body>
+</html>
