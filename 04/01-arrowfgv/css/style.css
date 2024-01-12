@@ -1,0 +1,11 @@
+.flex-container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+hr{
+    color: linear-gradient(#e66465, #9198e5);;
+}
