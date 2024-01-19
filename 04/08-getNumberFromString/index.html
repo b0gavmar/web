@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get number from string</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ki"></div>
+    </div>
+    
+    <script>
+        function getNumberFromString(s) {
+        
+        let matches = s.match(/(\d+)/);
+            
+        
+        if (matches) {
+            console.log(matches[1]);
+        }
+        
+        return matches;
+        }
+
+        console.log(getNumberFromString("1"), 1);
+        console.log(getNumberFromString("123"), 123);
+        console.log(getNumberFromString("this is number: 7"), 7);
+
+    </script>
+</body>
+</html>
