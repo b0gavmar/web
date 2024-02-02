@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean vs Median</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ki"></div>
+    </div>
+    
+    <script>
+    function meanVsMedian(numbers) {
+        let mean=0;
+        let sum = 0;
+        let half = 0;
+        let median = 0;
+        
+        numbers.sort();
+
+        numbers.forEach(number => {
+            sum+=number;
+        });
+        mean = sum/numbers.length;
+
+        half = Math.floor(numbers.length/2)
+        if(numbers.length%2 == 0){
+            let a = 0;
+            let b = 0;
+
+            a = numbers[half-1]; //mert az elemek indexelése 0tól van és pl 6/2 =3m, elemei: 0,1,2,3,4,5 => közép a hat fele-1 és a hat fele 
+            b = numbers[half];
+            median = (a+b)/2
+        }
+        else{
+            median = numbers[half];
+        }
+        
+        //console.log(numbers[half-1]);
+        //console.log(numbers[half]);
+        if(mean > median){
+            return("mean");
+        }
+        else if(median > mean){
+            return("median");
+        }
+        else{
+            return("same");
+        }
+    }
+    
+    console.log(meanVsMedian([1, 1, 1]), 'same');
+    console.log(meanVsMedian([1, 2, 37]), 'mean');
+    console.log(meanVsMedian([7, 14, -70]), 'median');
+
+    </script>
+</body>
+</html>
