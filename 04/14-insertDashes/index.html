@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Dashes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ki"></div>
+    </div>
+    
+    <script>
+    function insertDash(num) {
+        let e="";
+        let string = num.toString();
+        let t = string.split("");
+        for(let i = 0; i < t.length-1;i++){
+            e+= ""+t[i];
+           
+            if((t[i] % 2 != 0) && (t[i+1] % 2 != 0)){
+                e+="-";
+                console.log(e);
+                console.log(t[i+1]);
+            }
+            if(i+2 >= t.length){
+                console.log
+                e+=t[i+1];
+            }
+        }
+        return e;
+    }
+    console.log(insertDash(454793),'4547-9-3');
+    console.log(insertDash(123456),'123456');
+    console.log(insertDash(1003567),'1003-567');
+
+    </script>
+</body>
+</html>
