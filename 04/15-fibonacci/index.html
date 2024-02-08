@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ki"></div>
+    </div>
+    
+    <script>
+    function Fib(n)
+        {
+            let szam1 = 0;
+            let szam2 = 1;
+            let temp = 0;
+        
+            for(let i = 1; i<n; i++){
+                temp = szam1 + szam2;
+                szam1 = szam2;
+                szam2 = temp;
+            }
+            return temp;
+        }
+        console.log(5,Fib(5));
+        console.log(55,Fib(10));
+
+    </script>
+</body>
+</html>
