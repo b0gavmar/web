@@ -1,3 +1,4 @@
+//AllOrNothing
 function possiblyPerfect(key,answers) {
     let bad = 0;
     let good = 0;
