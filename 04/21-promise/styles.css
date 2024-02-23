@@ -1,0 +1,17 @@
+#imageContainer {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loadingText {
+    display: none;
+}
+
+#loadedImage {
+    max-width: 100%;
+    max-height: 600px;
+    margin-top: 20px;
+}
