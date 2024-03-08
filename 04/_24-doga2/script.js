@@ -1,3 +1,4 @@
+// 1. feladat Leonardo numbers - Leonardo számok
 L = (n , L0 , L1 , add) => {
   let t = [L0,L1];
 
@@ -16,7 +17,7 @@ console.log(L(10, 0, 1, 4), [0, 1, 5, 10, 19, 33, 56, 93, 153, 250]);
 
 console.log("Every nth");
 
-
+// 2. feladat Every nth array element - Minden n-edik tömbelem
 function every(arr, interval, start){
   let t2 = [];
   
@@ -35,6 +36,7 @@ console.log(every([0, 1, 2, 3, 4], 3, 1), [1, 4]);
 
 console.log("Odd ones out")
 
+// 3. feladat Odd Ones Out! - Páratlanok!
 function oddOnesOut(nums) {
   var t3=[];
 
