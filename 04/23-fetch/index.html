@@ -4,16 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Fetch</title>
 </head>
 
 <body>
     <div>
-        <form id="data">
+        <form id="data" onsubmit="return false">
             <label for="selectedId">Kiválasztott id:</label>
             <input type="number" min="1" max="30" id="selectedId">
             <button onclick="FetchUser();">Kiírás</button>
         </form>
+
+    </div>
+    <div id="ki">
+        
     </div>
 
     <script src="script.js"></script>
