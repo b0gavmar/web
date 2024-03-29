@@ -2,7 +2,7 @@ function FetchUser(){
   let id = parseInt(document.getElementById("selectedId").value);
 
   console.log(id);
-  fetch('https://jsonplaceholder.org/users/?id=1'+id)
+  fetch('https://jsonplaceholder.org/users/?id='+id)
   .then(response => {
     return response.json(); //1 utasitasnal nem kell return a then-nél, ha tobb van akkor return nélkül a következő nem kap adatot
   })
