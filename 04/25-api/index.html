@@ -5,22 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>api hívás</title>
+    <style>
+        #container{
+            width: 50%;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div id="conatiner">
+    <div id="container">
         <form id="data" onsubmit="return false">
             <label for="selectedZip">Kiválasztott Település:</label>
             <input type="text" id="selectedZip">
             <button onclick="FetchZips();">Kiírás</button>
         </form>
-    </div>
-    <div id="ki">
-        
-    </div>
 
-    <script src="script.js"></script>
+        <div id="ki">
+        
+        </div>
+    </div>
+    
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
