@@ -2,7 +2,7 @@ function FetchUser(){
   let id = parseInt(document.getElementById("selectedId").value);
 
   console.log(id);
-  fetch('https://jsonplaceholder.org/users/?id='+id)
+  fetch('https://jsonplaceholder.org/users/?id=1'+id)
   .then(response => {
     return response.json(); //1 utasitasnal nem kell return a then-nél, ha tobb van akkor return nélkül a következő nem kap adatot
   })
@@ -40,7 +40,7 @@ function consoleKi(user){
 }
 
 function KiIr(user){
-  document.getElementById("ki").innerHTML = "";
+  document.getElementById("ki2").innerHTML = '<div id="ki">';
   document.getElementById("ki").innerHTML += user.id +"<br>" 
   +user.firstname +"<br>" 
   +user.lastname +"<br>" 
@@ -55,5 +55,5 @@ function KiIr(user){
   +user.website +"<br>" 
   +user.company.name +"<br>"
   +user.company.catchPhrase +"<br>"
-  +user.company.bs +"<br>"
+  +user.company.bs +"</div>"
 }
