@@ -11,16 +11,21 @@
 <body>
     <div id="container">
         <h1>Kurzusok</h1>
-
+        <label for="sorszam">Kurzus sorszáma:</label>
+                <input type="number" name="sorszam" id="sorszam" min="0">
+                <button onclick="SearchCourse();">Keresés</button>
+        
+        <br>
+        
+        <label for="knev">Kurzus :</label>
+                <input type="string" name="knev" id="knev">
+                <button onclick="AddCourse();">Hozzáadás</button>
+        
+        <hr width="80%">
+        
         <div id="flex-container">
             <div id="courses">
-                <label for="sorszam">Kurzus sorszáma:</label>
-                <input type="number" name="sorszam" id="sorszam" min="0">
-                <button onclick="Search();">Keresés</button>
-                <hr>
-                <label for="nev">Kurzus :</label>
-                <input type="string" name="nev" id="nev">
-                <button onclick="Post();">Keresés</button>
+                
             </div>
         </div>
     </div>

@@ -24,12 +24,14 @@ body{
 
 }
 
+/*
 #flex-container{
-    /*display: flex;
+    display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;*/
+    flex-wrap: wrap;
 
 }
+*/
 
 td{
     text-align: center;

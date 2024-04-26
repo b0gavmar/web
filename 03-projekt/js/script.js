@@ -1,33 +1,26 @@
 fetch("https://vvri.pythonanywhere.com/api/courses")
     .then(response => response.json())
     .then(json => {
-        let li = `
-        
-
-        <table>
-            <tr>
-                <th>Kurzus sorszáma</th>
-                <th>Kurzus neve</th>
-                </tr>`
-        ;
+        let li = ``;
         json.forEach(course => {
-            li += `<tr>
-                <td>${course.id} </td>
-                <td>${course.name}</td>        
-            </tr>`;
+            li += `
+            <div>
+                ${course.id}. 
+                ${course.name}   
+            </div>`;
         });
-        li+="</table>";
-    document.getElementById("courses").innerHTML += li;
+    document.getElementById("courses").innerHTML = li;
 });
 
-function Post(){
-    fetch("https://jsonplaceholder.typicode.com/todos", {
+function AddCourse(){
+    let kNev = document.getElementById("knev").value;
+    fetch("https://vvri.pythonanywhere.com/api/courses", {
         // Metódus hozzáadása
         method: "POST",
           
         // Küldendő test vagy tartalom hozzáadása
         body: JSON.stringify({
-            name: "mukszik a post",
+            name: kNev,
         }),
          
         // Fejlécek hozzáadása a kéréshez
@@ -38,7 +31,23 @@ function Post(){
 }
 
 
-function Search(){
-    let a = parseInt(document.getElementById("sorszam").value);
-    console.log(a);
+function SearchCourse(){
+    let sorSzam = parseInt(document.getElementById("sorszam").value);
+    fetch(`https://vvri.pythonanywhere.com/api/courses/${sorSzam}`)
+    .then(response => response.json())
+    .then(course => {
+        let li = `<div>
+                        ${course.id}. ${course.name} 
+                        <br><br>
+                        Diákok:
+                        <list>
+                            <ul>
+                        `;
+
+        course.students.forEach(student =>{
+            li+=`<li>id:${student.id} - név:${student.name} </li>`;
+        });
+        li+=`</ul></list></div>`;
+    document.getElementById("courses").innerHTML = li;
+});
 }
