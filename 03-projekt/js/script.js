@@ -1,4 +1,5 @@
-fetch("https://vvri.pythonanywhere.com/api/courses")
+function Load(){
+    fetch("https://vvri.pythonanywhere.com/api/courses")
     .then(response => response.json())
     .then(json => {
         let li = ``;
@@ -11,6 +12,9 @@ fetch("https://vvri.pythonanywhere.com/api/courses")
         });
     document.getElementById("courses").innerHTML = li;
 });
+}
+
+
 
 function AddCourse(){
     let kNev = document.getElementById("knev").value;
@@ -27,7 +31,8 @@ function AddCourse(){
         headers: {
             "Content-type": "application/json; charset=UTF-8"
         }
-     })
+    });
+    Load(); //nem mukszik
 }
 
 
@@ -49,5 +54,27 @@ function SearchCourse(){
         });
         li+=`</ul></list></div>`;
     document.getElementById("courses").innerHTML = li;
+});
+}
+
+
+function AddStudent(){
+    fetch(`https://vvri.pythonanywhere.com/api/courses/${sorSzam}`, {
+     
+    // Metódus hozzáadása
+    method: "PUT",
+     
+    // Küldendő test vagy tartalom hozzáadása
+    body: JSON.stringify({
+        userId: 1,
+        id: 1,
+        title: "put",
+        completed: false,
+    }),
+     
+    // Fejlécek hozzáadása a kéréshez
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
+    }
 });
 }
