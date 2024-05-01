@@ -8,7 +8,7 @@
     <script src="js/script.js"></script>
     <title>Kurzusok</title>
 </head>
-<body onload="Load();">
+<body onload="Basic();">
     <div id="container">
         <h1>Kurzusok</h1>
         <div class="flex-container2">
@@ -29,7 +29,7 @@
                 <label for="dnev">Diák neve:</label>
                 <input type="string" name="dnev" id="dnev">
            </div>
-<br>
+        <br>
         </div>
 
         <div class="flex-container2">
@@ -38,8 +38,13 @@
             <button onclick="AddStudent();" id="addStudentButton">Diák Hozzáadás</button>
             <button onclick="RemoveStudent();" id="removeStudentButton">Diák törlése</button>
             <button onclick="SearchStudent();">Diák keresése</button>
+            <br><br>
         </div>
 
+        <div>
+            <button onclick="LoadCourses();">Kurzusok mutatása</button>
+            <button onclick=";">Diákok mutatása</button>
+        </div>
 
                 
 
