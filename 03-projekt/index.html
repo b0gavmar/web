@@ -11,16 +11,38 @@
 <body onload="Load();">
     <div id="container">
         <h1>Kurzusok</h1>
-        <label for="sorszam">Kurzus sorszáma:</label>
-                <input type="number" name="sorszam" id="sorszam" min="0">
-                <button onclick="SearchCourse();">Keresés</button>
-        
-        <br>
-        
-        <label for="knev">Kurzus :</label>
+        <div class="flex-container2">
+            <div>
+                <label for="kid">Kurzus ID-je:</label>
+                <input type="number" name="kid" id="kid" min="1">
+            </div>
+           <div>
+                <label for="knev">Kurzus neve:</label>
                 <input type="string" name="knev" id="knev">
-                <button onclick="AddCourse();">Hozzáadás</button>
-        
+           </div>
+           <br>
+           <div>
+                <label for="did">Diák ID-je:</label>
+                <input type="number" name="did" id="did" min="1">
+            </div>
+           <div>
+                <label for="dnev">Diák neve:</label>
+                <input type="string" name="dnev" id="dnev">
+           </div>
+<br>
+        </div>
+
+        <div class="flex-container2">
+            <button onclick="SearchCourse();" id="searchCourseButton">Kurzus Keresés</button>
+            <button onclick="AddCourse();" id="addCourseButton">Kurzus Hozzáadás</button>
+            <button onclick="AddStudent();" id="addStudentButton">Diák Hozzáadás</button>
+            <button onclick="RemoveStudent();" id="removeStudentButton">Diák törlése</button>
+            <button onclick="SearchStudent();">Diák keresése</button>
+        </div>
+
+
+                
+
         <hr width="80%">
         
         <div id="flex-container">
