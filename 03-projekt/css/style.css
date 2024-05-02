@@ -11,7 +11,7 @@ body{
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 #container{
@@ -24,38 +24,54 @@ body{
 
 }
 
-/*
-#flex-container{
+
+.flex-container{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
-}
-*/
-
-td{
-    text-align: center;
+    padding: 10px;
 }
 
-@media(min-width:1200px){
 
+#courses{
+    max-width: 750px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
 }
 
-/*
+.course,.student{
+    display: flex;
+    background-color: rgb(54, 183, 223);
+    max-width: 250px;
+    flex-wrap: wrap;
+    word-wrap:break-word; display:inline-block;
+    border-radius: 11px;
+    padding: 5px;
+}
+
+.course:hover,.student:hover{
+    box-shadow: 0 0 40px rgb(30, 163, 240);
+    background-color: #3f7ff5;
+}
+
+@media(min-width:800px){
+    body{
+        font-size: 1.5em;
+    }
+
+    .course,.student{
+        width: 28%;
+    }
+}
+
 @media (max-width: 800px) {
-    .card {
-      flex: 35%;
-      max-width: 200px;
-      max-height: 270px;
+    .course,.student{
+        width: 100%;
     }
   }
   
-@media (max-width: 400px) {
-    .card {
-      flex: 100%;
-      max-width: 200px;
-      max-height: 300px;
-    } 
-    
-}
-*/
+

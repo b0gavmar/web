@@ -11,28 +11,27 @@
 <body onload="Basic();">
     <div id="container">
         <h1>Kurzusok</h1>
-        <div class="flex-container2">
-            <div>
+        <div class="">
+            <div class="flex-container">
                 <label for="kid">Kurzus ID-je:</label>
                 <input type="number" name="kid" id="kid" min="1">
             </div>
-           <div>
+           <div class="flex-container">
                 <label for="knev">Kurzus neve:</label>
                 <input type="string" name="knev" id="knev">
            </div>
-           <br>
-           <div>
+           <div class="flex-container">
                 <label for="did">Diák ID-je:</label>
                 <input type="number" name="did" id="did" min="1">
             </div>
-           <div>
+           <div class="flex-container">
                 <label for="dnev">Diák neve:</label>
                 <input type="string" name="dnev" id="dnev">
-           </div>
+           </div class="flex-container">
         <br>
         </div>
 
-        <div class="flex-container2">
+        <div class="flex-container">
             <button onclick="SearchCourse();" id="searchCourseButton">Kurzus Keresés</button>
             <button onclick="AddCourse();" id="addCourseButton">Kurzus Hozzáadás</button>
             <button onclick="AddStudent();" id="addStudentButton">Diák Hozzáadás</button>
@@ -43,14 +42,14 @@
 
         <div>
             <button onclick="LoadCourses();">Kurzusok mutatása</button>
-            <button onclick=";">Diákok mutatása</button>
+            <button onclick="LoadStudents();">Diákok mutatása</button>
         </div>
 
                 
 
         <hr width="80%">
         
-        <div id="flex-container">
+        <div>
             <div id="courses">
                 
             </div>
