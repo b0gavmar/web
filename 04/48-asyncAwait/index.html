@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Kurzusok</title>
+</head>
+<body onload="Basic();">
+    <div id="container">
+        <h1>Kurzusok</h1>
+        <div class="">
+            <div class="flex-container">
+                <label for="kid">Kurzus ID-je:</label>
+                <input type="number" name="kid" id="kid" min="1">
+            </div>
+           <div class="flex-container">
+                <label for="knev">Kurzus neve:</label>
+                <input type="string" name="knev" id="knev">
+           </div>
+           <div class="flex-container">
+                <label for="did">Diák ID-je:</label>
+                <input type="number" name="did" id="did" min="1">
+            </div>
+           <div class="flex-container">
+                <label for="dnev">Diák neve:</label>
+                <input type="string" name="dnev" id="dnev">
+           </div class="flex-container">
+        <br>
+        </div>
+
+        <div class="flex-container">
+            <button onclick="SearchCourse();" id="searchCourseButton">Kurzus Keresés</button>
+            <button onclick="AddCourse();" id="addCourseButton">Kurzus Hozzáadás</button>
+            <button onclick="AddStudent();" id="addStudentButton">Diák Hozzáadás</button>
+            <button onclick="RemoveStudent();" id="removeStudentButton">Diák törlése</button>
+            <button onclick="SearchStudent();">Diák keresése</button>
+            <br><br>
+        </div>
+
+        <div>
+            <button onclick="fetchCoursesAsync();">Kurzusok mutatása</button>
+            <button onclick="fetchStudentsAsync();">Diákok mutatása</button>
+        </div>
+
+                
+
+        <hr width="80%">
+        
+        <div>
+            <div id="courses">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+html{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, #00A192 0%, #04AFD3 100%);
+    color: whitesmoke;
+}
+
+/*display none */
+
+body{ 
+    background-size: fill;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3em;
+}
+
+#container{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.flex-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+
+#courses{
+    max-width: 750px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.course,.student{
+    display: flex;
+    background-color: rgb(54, 183, 223);
+    max-width: 250px;
+    flex-wrap: wrap;
+    word-wrap:break-word; display:inline-block;
+    border-radius: 11px;
+    padding: 5px;
+}
+
+.course:hover,.student:hover{
+    box-shadow: 0 0 40px rgb(30, 163, 240);
+    background-color: #3f7ff5;
+}
+
+@media(min-width:800px){
+    body{
+        font-size: 1.5em;
+    }
+
+    .course,.student{
+        width: 28%;
+    }
+}
+
+@media (max-width: 800px) {
+    .course,.student{
+        width: 100%;
+    }
+  }
+  
