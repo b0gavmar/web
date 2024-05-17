@@ -53,27 +53,6 @@ function Basic(){
     document.getElementById("did").value = parseInt();
 }
 
-/*
-function LoadCourses(){
-    fetch("https://vvri.pythonanywhere.com/api/courses")
-    .then(response => response.json())
-    .then(json => {
-        let li = ``;
-        json.forEach(course => {
-            li += `
-            <div class="course" onclick="ShowCourse(this)" data-id='${course.id}'>
-                ${course.id}. 
-                ${course.name}   
-            `;
-           
-            
-            li+="</div>";
-        });
-        document.getElementById("courses").innerHTML = li;
-    }).catch(error => console.error('Hiba:', error));
-}
-*/
-
 async function fetchCoursesAsync() {
     try {
       const response = await fetch(url, {
@@ -113,25 +92,6 @@ function ShowStudent(ezADiak){
     dId = valahanyadik;
     SearchStudent();
 }
-
-/*
-function LoadStudents(){
-    fetch("https://vvri.pythonanywhere.com/api/students")
-    .then(response => response.json())
-    .then(json => {
-        let li = ``;
-        json.forEach(student => {
-            li += `
-            <div class="student" onclick="ShowStudent(this)" data-id='${student.id}'>
-                ${student.id}. 
-                ${student.name}   
-            `;
-        
-            li+="</div>";
-        });
-        document.getElementById("courses").innerHTML = li;
-    }).catch(error => console.error('Hiba:', error));
-}*/
 
 async function fetchStudentsAsync() {
     try {
@@ -268,22 +228,6 @@ async function AddStudent(){
             console.log("Hiba történt: " + error)
           }
 
-        /*fetch(`https://vvri.pythonanywhere.com/api/students`, {
-     
-        method: "POST",
-         
-        body: JSON.stringify({
-            name: dNev,
-            course_id: kId,
-        }),
-         
-        headers: {
-            "Content-type": "application/json; charset=UTF-8"
-        }
-        }).then(response => response.json())
-        .then(() =>{
-            console.log("Diák hozzáadva")
-        }).catch(error => (console.log("Hiba diák hozzáadásakor:"+error)));*/
     }
     
 }
@@ -361,15 +305,6 @@ async function RemoveStudent(){
             } catch(error) { 
               console.log("Hiba történt: " + error)
             }
-        /*fetch(`https://vvri.pythonanywhere.com/api/students/${dId}`, {
-     
-        method: "DELETE",
-        
-        }).then(response => response.json())
-        .then(() =>{
-            console.log("Diák törölve")
-        });*/
-        /*.catch(error => (console.log("Hiba diák törlésekor: "+error)))*/;
     }
 }
 
@@ -415,41 +350,9 @@ async function SearchStudent(){
           } catch(error) { 
             console.log("Hiba történt: " + error)
           }
-        /*fetch(`https://vvri.pythonanywhere.com/api/students`)
-        .then(response => response.json())
-        .then(students => {
-            let li;
-            students.forEach(student => {
-                if(student.name == dNev){
-                    li = `<div>
-                            ${student.id}. ${student.name} 
-                            <br><br>
-                            Adatok változtatása:
-                            
-                            <div class="flex-container2">
-                                <div>
-                                    <input type="string" name="diakkurzust" id="diakkurzus" placeholder="kurzus id">
-                                    <input type="string" name="diaknevvalt" id="diaknevvalt" placeholder="új név">
-                                    <button onclick="ChangeStudentName(${student.id});">megváltoztat</button>
-                                </div>
-
-                            </div>
-                            
-                            </div>`;
-                    
-                }
-            })
-            if(li == undefined){
-                li ="<div>Nincs ilyen diák</div>";
-            }
-            
-                document.getElementById("courses").innerHTML = li;
-                
-                    
-        }).catch(error => console.log("Hiba diák keresésekor:"+error));*/
     }
     else{
-        try {
+        /*try {
             const response = await fetch(`https://vvri.pythonanywhere.com/api/students/${dId}`, {
               method: "GET",
               headers: {
@@ -494,8 +397,8 @@ async function SearchStudent(){
         
           } catch(error) { 
             console.log("Hiba történt: " + error)
-          }
-        /*
+          }*/
+        
         fetch(`https://vvri.pythonanywhere.com/api/students/${dId}`)
         .then(response => response.json())
         .then(student => {
@@ -520,26 +423,31 @@ async function SearchStudent(){
                 document.getElementById("courses").innerHTML = li;
                 
                     
-        }).catch(error => console.log("Hiba diák keresésekor:"+error));*/
+        }).catch(error => console.log("Hiba diák keresésekor:"+error));
     }
 }
 
-function ChangeStudentName(kapottId){
-    let ujDiakNev = document.getElementById("diaknevvalt").value;
-    let diakKurzus = document.getElementById("diakkurzus").value;
-    fetch(`https://vvri.pythonanywhere.com/api/students/${kapottId}`, {
-     
-        method: "PUT",
-        
-        body: JSON.stringify({
+async function ChangeStudentName(kapottId){
+    try {
+        let ujDiakNev = document.getElementById("diaknevvalt").value;
+        let diakKurzus = document.getElementById("diakkurzus").value;
+        const response = await fetch(`https://vvri.pythonanywhere.com/api/students/${kapottId}`, {
+          method: "PUT",
+          headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          },
+          body: JSON.stringify({
             name: ujDiakNev,
             course_id: diakKurzus,
-        }),
-        
-        headers: {
-            "Content-type": "application/json; charset=UTF-8"
+          })
+        })
+        const data = await response.json();
+        if (data){
+            console.log("Diák frissítve");
         }
-    }).then(dId = kapottId)
-    .then(SearchStudent)
-    .catch(error => (console.log("hiba:"+error)));
+      
+    
+      } catch(error) { 
+        console.log("Hiba történt: " + error)
+      }
 }
