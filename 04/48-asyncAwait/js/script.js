@@ -245,7 +245,8 @@ function SearchCourse(){
 async function AddStudent(){
     if(dNev == "" || typeof kId == null){
         
-    }else{
+    }
+    else{
         try {
             const response = await fetch(url2, {
               method: "POST",
@@ -259,9 +260,8 @@ async function AddStudent(){
             })
             const data = await response.json();
             if (data){
-                console.log("Diák hozzáadva")
-            document.getElementById("courses").innerHTML = li;
-          }
+                console.log("Diák hozzáadva");
+            }
           
         
           } catch(error) { 
@@ -288,11 +288,45 @@ async function AddStudent(){
     
 }
 
-function RemoveStudent(){
+async function RemoveStudent(){
     //console.log(dId);
     let torolniAkartDiakId;
     if(Number.isNaN(dId)){
-        
+        /*try {
+            const response = await fetch(url, {
+              method: "GET",
+              headers: {
+              "Content-type": "application/json; charset=UTF-8",
+              }
+            })
+            const students = await response.json();
+            if (students){
+                    students.forEach(student => {
+                        if(student.name == dNev){
+                            try{
+                            const response2 = await fetch(url2, {
+                                method: "DELETE",
+                                headers: {
+                                "Content-type": "application/json; charset=UTF-8",
+                                },
+                              })
+                              const data2 = await response2.json();
+                              if (data2){
+                                  console.log("Diák törölve");
+                              }
+                            
+                          
+                            } catch(error) { 
+                              console.log("Hiba történt: " + error)
+                            }
+                        }
+                    });
+            };         
+          }
+           catch(error) { 
+            console.log("Hiba történt: " + error)
+          }*/
+        /*
         fetch(`https://vvri.pythonanywhere.com/api/students`)
         .then(response => response.json())
         .then(students => {
@@ -308,26 +342,80 @@ function RemoveStudent(){
         })
         .then(() =>{
             console.log("Diák törölve")
-        });
+        });*/
     }
     else{
-        fetch(`https://vvri.pythonanywhere.com/api/students/${dId}`, {
+        try{
+            const response2 = await fetch(`https://vvri.pythonanywhere.com/api/students/${dId}`, {
+                method: "DELETE",
+                headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                },
+              })
+              const data2 = await response2.json();
+              if (data2){
+                  console.log("Diák törölve");
+              }
+            
+          
+            } catch(error) { 
+              console.log("Hiba történt: " + error)
+            }
+        /*fetch(`https://vvri.pythonanywhere.com/api/students/${dId}`, {
      
         method: "DELETE",
         
         }).then(response => response.json())
         .then(() =>{
             console.log("Diák törölve")
-        });
+        });*/
         /*.catch(error => (console.log("Hiba diák törlésekor: "+error)))*/;
     }
 }
 
 
-//hha túl nagy az id, az nem megy
-function SearchStudent(){
+
+async function SearchStudent(){
     if(Number.isNaN(dId) == true){
-        fetch(`https://vvri.pythonanywhere.com/api/students`)
+        try {
+            const response = await fetch(url2, {
+              method: "GET",
+              headers: {
+              "Content-type": "application/json; charset=UTF-8",
+              }
+            })
+            const data = await response.json();
+            if (data){
+              let li="";
+              data.forEach(student => {
+                if(student.name == dNev){
+                    li = `<div>
+                            ${student.id}. ${student.name} 
+                            <br><br>
+                            Adatok változtatása:
+                            
+                            <div class="flex-container2">
+                                <div>
+                                    <input type="string" name="diakkurzust" id="diakkurzus" placeholder="kurzus id">
+                                    <input type="string" name="diaknevvalt" id="diaknevvalt" placeholder="új név">
+                                    <button onclick="ChangeStudentName(${student.id});">megváltoztat</button>
+                                </div>
+
+                            </div>
+                            
+                            </div>`;
+                    
+                }
+      
+            });
+            document.getElementById("courses").innerHTML = li;
+          }
+          
+        
+          } catch(error) { 
+            console.log("Hiba történt: " + error)
+          }
+        /*fetch(`https://vvri.pythonanywhere.com/api/students`)
         .then(response => response.json())
         .then(students => {
             let li;
@@ -358,9 +446,56 @@ function SearchStudent(){
                 document.getElementById("courses").innerHTML = li;
                 
                     
-        }).catch(error => console.log("Hiba diák keresésekor:"+error));
+        }).catch(error => console.log("Hiba diák keresésekor:"+error));*/
     }
     else{
+        try {
+            const response = await fetch(`https://vvri.pythonanywhere.com/api/students/${dId}`, {
+              method: "GET",
+              headers: {
+              "Content-type": "application/json; charset=UTF-8",
+              }
+            })
+            const diakok = await response.json();
+            if (diakok){
+              let li="";
+              const elegemvan = jsonParse(diakok);
+              diakok.forEach(student => {
+                    if(student.name == dNev){
+                        let li = `<div>
+                                ${student.id}. ${student.name} 
+                                <br><br>
+                                Adatok változtatása:
+
+                                <div class="flex-container2">
+                                    <div>
+                                        <input type="string" name="diakkurzust" id="diakkurzus" placeholder="kurzus id">
+                                        <input type="string" name="diaknevvalt" id="diaknevvalt" placeholder="új név">
+                                        <button onclick="ChangeStudentName(${student.id});">megváltoztat</button>
+                                    </div>
+
+                                </div>
+                                
+                                </div>`;
+                        
+                    }
+                    if(student.id == undefined){
+                        li ="<div>Nincs ilyen diák</div>";
+                    }
+                    
+      
+              });
+            
+          }
+          else{
+            li ="<div>Nincs ilyen diák</div>";
+          }
+          document.getElementById("courses").innerHTML = li;
+        
+          } catch(error) { 
+            console.log("Hiba történt: " + error)
+          }
+        /*
         fetch(`https://vvri.pythonanywhere.com/api/students/${dId}`)
         .then(response => response.json())
         .then(student => {
@@ -385,7 +520,7 @@ function SearchStudent(){
                 document.getElementById("courses").innerHTML = li;
                 
                     
-        }).catch(error => console.log("Hiba diák keresésekor:"+error));
+        }).catch(error => console.log("Hiba diák keresésekor:"+error));*/
     }
 }
 
@@ -394,16 +529,16 @@ function ChangeStudentName(kapottId){
     let diakKurzus = document.getElementById("diakkurzus").value;
     fetch(`https://vvri.pythonanywhere.com/api/students/${kapottId}`, {
      
-    method: "PUT",
-     
-    body: JSON.stringify({
-        name: ujDiakNev,
-        course_id: diakKurzus,
-    }),
-     
-    headers: {
-        "Content-type": "application/json; charset=UTF-8"
-    }
+        method: "PUT",
+        
+        body: JSON.stringify({
+            name: ujDiakNev,
+            course_id: diakKurzus,
+        }),
+        
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
     }).then(dId = kapottId)
     .then(SearchStudent)
     .catch(error => (console.log("hiba:"+error)));
